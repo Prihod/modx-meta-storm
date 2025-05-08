@@ -16,7 +16,7 @@
 ## Установка
 
 ```bash
-composer require prohod/modx-meta-storm
+composer require prihod/modx-meta-storm
 ```
 
 ## Использование

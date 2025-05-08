@@ -2,8 +2,42 @@
 
 namespace MetaStorm;
 
-class Installer
+use Composer\Plugin\PluginInterface;
+use Composer\Composer;
+use Composer\IO\IOInterface;
+use Composer\EventDispatcher\EventSubscriberInterface;
+use Composer\Script\Event;
+
+
+class Installer implements PluginInterface, EventSubscriberInterface
 {
+    public function activate(Composer $composer, IOInterface $io)
+    {
+        $io->write("MetaStorm plugin activated!");
+    }
+
+    public static function getSubscribedEvents()
+    {
+        return [
+            'post-install-cmd' => 'onPostInstall',
+            'post-update-cmd' => 'onPostInstall',
+        ];
+    }
+
+    public function onPostInstall(Event $event)
+    {
+        Installer::postInstall();
+    }
+
+    public function deactivate(Composer $composer, IOInterface $io)
+    {
+    }
+
+    public function uninstall(Composer $composer, IOInterface $io)
+    {
+
+    }
+
     public static function postInstall()
     {
         echo "Running MetaStorm post-install script...\n";

@@ -2,27 +2,25 @@
   "name": "prihod/modx-meta-storm",
   "version": "1.0.0",
   "description": "Generate .meta-storm.xml files for MODX projects, required by MetaStorm plugin for IntelliJ IDEA and PhpStorm.",
-  "type": "library",
+  "type": "composer-plugin",
   "authors": [
     {
       "name": "Prihod"
     }
   ],
   "require": {
-    "php": "^7.4"
+    "php": "^7.4",
+    "composer/composer": "^2.0"
   },
   "autoload": {
     "psr-4": {
       "MetaStorm\\": "src/"
     }
   },
-  "scripts": {
-    "post-install-cmd": [
-      "MetaStorm\\Installer::postInstall"
-    ],
-    "post-update-cmd": [
-      "MetaStorm\\Installer::postInstall"
-    ]
+  "extra": {
+    "composer-plugin": {
+      "class": "MetaStorm\\Installer"
+    }
   },
   "bin": [
     "bin/generate-meta-storm"

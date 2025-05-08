@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-require require dirname(__DIR__, 3) . '/autoload.php';;
+require  dirname(__DIR__, 3) . '/autoload.php';;
 
 use MetaStorm\MetaGenerator;
 

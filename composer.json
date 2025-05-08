@@ -9,8 +9,7 @@
     }
   ],
   "require": {
-    "php": "^7.4",
-    "modx/revolution": "^3.0"
+    "php": "^7.4"
   },
   "autoload": {
     "psr-4": {

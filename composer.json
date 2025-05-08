@@ -9,7 +9,9 @@
     }
   ],
   "require": {
-    "php": "^7.4",
+    "php": "^7.4"
+  },
+  "require-dev": {
     "composer/composer": "^2.0"
   },
   "autoload": {

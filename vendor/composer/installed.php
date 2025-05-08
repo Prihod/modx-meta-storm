@@ -17,7 +17,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/./ca-bundle',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'composer/class-map-generator' => array(
             'pretty_version' => '1.6.1',
@@ -26,7 +26,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/./class-map-generator',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'composer/composer' => array(
             'pretty_version' => '2.8.8',
@@ -35,7 +35,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/./composer',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'composer/metadata-minifier' => array(
             'pretty_version' => '1.0.0',
@@ -44,7 +44,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/./metadata-minifier',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'composer/pcre' => array(
             'pretty_version' => '3.3.2',
@@ -53,7 +53,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/./pcre',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'composer/semver' => array(
             'pretty_version' => '3.4.3',
@@ -62,7 +62,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/./semver',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'composer/spdx-licenses' => array(
             'pretty_version' => '1.5.8',
@@ -71,7 +71,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/./spdx-licenses',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'composer/xdebug-handler' => array(
             'pretty_version' => '3.0.5',
@@ -80,7 +80,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/./xdebug-handler',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'justinrainbow/json-schema' => array(
             'pretty_version' => '6.4.1',
@@ -89,7 +89,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../justinrainbow/json-schema',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'marc-mabe/php-enum' => array(
             'pretty_version' => 'v4.7.1',
@@ -98,7 +98,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../marc-mabe/php-enum',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'prihod/modx-meta-storm' => array(
             'pretty_version' => '1.0.0',
@@ -116,7 +116,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../psr/container',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'psr/log' => array(
             'pretty_version' => '1.1.4',
@@ -125,10 +125,10 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../psr/log',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'psr/log-implementation' => array(
-            'dev_requirement' => false,
+            'dev_requirement' => true,
             'provided' => array(
                 0 => '1.0|2.0',
             ),
@@ -140,7 +140,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../react/promise',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'seld/jsonlint' => array(
             'pretty_version' => '1.11.0',
@@ -149,7 +149,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../seld/jsonlint',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'seld/phar-utils' => array(
             'pretty_version' => '1.2.1',
@@ -158,7 +158,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../seld/phar-utils',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'seld/signal-handler' => array(
             'pretty_version' => '2.0.2',
@@ -167,7 +167,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../seld/signal-handler',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'symfony/console' => array(
             'pretty_version' => 'v5.4.47',
@@ -176,7 +176,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/console',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'symfony/deprecation-contracts' => array(
             'pretty_version' => 'v2.5.4',
@@ -185,7 +185,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/deprecation-contracts',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'symfony/filesystem' => array(
             'pretty_version' => 'v5.4.45',
@@ -194,7 +194,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/filesystem',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'symfony/finder' => array(
             'pretty_version' => 'v5.4.45',
@@ -203,7 +203,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/finder',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'symfony/polyfill-ctype' => array(
             'pretty_version' => 'v1.32.0',
@@ -212,7 +212,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/polyfill-ctype',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'symfony/polyfill-intl-grapheme' => array(
             'pretty_version' => 'v1.32.0',
@@ -221,7 +221,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/polyfill-intl-grapheme',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'symfony/polyfill-intl-normalizer' => array(
             'pretty_version' => 'v1.32.0',
@@ -230,7 +230,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/polyfill-intl-normalizer',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'symfony/polyfill-mbstring' => array(
             'pretty_version' => 'v1.32.0',
@@ -239,7 +239,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/polyfill-mbstring',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'symfony/polyfill-php73' => array(
             'pretty_version' => 'v1.32.0',
@@ -248,7 +248,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/polyfill-php73',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'symfony/polyfill-php80' => array(
             'pretty_version' => 'v1.32.0',
@@ -257,7 +257,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/polyfill-php80',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'symfony/polyfill-php81' => array(
             'pretty_version' => 'v1.32.0',
@@ -266,7 +266,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/polyfill-php81',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'symfony/process' => array(
             'pretty_version' => 'v5.4.47',
@@ -275,7 +275,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/process',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'symfony/service-contracts' => array(
             'pretty_version' => 'v2.5.4',
@@ -284,7 +284,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/service-contracts',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
         'symfony/string' => array(
             'pretty_version' => 'v5.4.47',
@@ -293,7 +293,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/string',
             'aliases' => array(),
-            'dev_requirement' => false,
+            'dev_requirement' => true,
         ),
     ),
 );

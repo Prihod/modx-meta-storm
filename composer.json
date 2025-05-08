@@ -1,11 +1,11 @@
 {
-  "name": "prohod/modx-meta-storm",
+  "name": "prihod/modx-meta-storm",
   "version": "1.0.0",
   "description": "Generate .meta-storm.xml files for MODX projects, required by MetaStorm plugin for IntelliJ IDEA and PhpStorm.",
   "type": "library",
   "authors": [
     {
-      "name": "Prohod"
+      "name": "Prihod"
     }
   ],
   "require": {

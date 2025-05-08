@@ -1,11 +1,11 @@
 {
-  "name": "prihod/modx-meta-storm",
+  "name": "prohod/modx-meta-storm",
   "version": "1.0.0",
   "description": "Generate .meta-storm.xml files for MODX projects, required by MetaStorm plugin for IntelliJ IDEA and PhpStorm.",
-  "type": "project",
+  "type": "library",
   "authors": [
     {
-      "name": "Prihod"
+      "name": "Prohod"
     }
   ],
   "require": {
@@ -17,20 +17,17 @@
     }
   },
   "scripts": {
-    "set-force-env": "@php -r \"putenv('FORCE=true');\"",
     "post-install-cmd": [
-      "@set-force-env",
       "MetaStorm\\Installer::postInstall",
-      "@chmod +x bin/generate-meta-storm.php"
+      "@php -r \"chmod('bin/generate-meta-storm.php', 0755);\""
     ],
     "post-update-cmd": [
-      "@set-force-env",
       "MetaStorm\\Installer::postInstall",
-      "@chmod +x bin/generate-meta-storm.php"
+      "@php -r \"chmod('bin/generate-meta-storm.php', 0755);\""
     ]
   },
   "bin": [
-    "bin/generate-meta-storm.php"
+    "bin/generate-meta-storm"
   ],
   "minimum-stability": "dev",
   "prefer-stable": true

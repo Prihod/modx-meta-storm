@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use MetaStorm\MetaGenerator;
+
+$projectRoot = getcwd();
+$templatePath = __DIR__ . '/../templates/meta-storm.xml.tpl';
+
+$force = in_array('--force', $argv, true);
+$verbose = in_array('--verbose', $argv, true);
+
+MetaGenerator::generate($projectRoot, $templatePath, $force, $verbose);

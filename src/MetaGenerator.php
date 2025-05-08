@@ -4,8 +4,15 @@ namespace MetaStorm;
 
 class MetaGenerator
 {
-    public static function generate(string $projectRoot, string $templatePath, bool $force = false, bool $verbose = false): void
+    public static function generate(string $path, string $templatePath, bool $force = false, bool $verbose = false): void
     {
+        $corePos = strpos($path, 'core/');
+        if ($corePos === false) {
+            $projectRoot = $path;
+        } else {
+            $projectRoot = substr($path, 0, $corePos);
+        }
+
         if ($verbose) {
             echo "Starting MetaStorm generator\n";
             echo "Project root: $projectRoot\n";
@@ -18,13 +25,11 @@ class MetaGenerator
             exit(1);
         }
 
-        $corePath = $projectRoot . '/core/components';
-
         if ($verbose) {
-            echo "Scanning directory: $corePath\n";
+            echo "Scanning directory: $path\n";
         }
 
-        $rii = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($corePath));
+        $rii = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($path));
 
         $directories = [];
         $schemaCount = 0;
@@ -56,7 +61,7 @@ class MetaGenerator
 
         foreach ($directories as $dir => $files) {
             foreach ($files as $file) {
-                $metaFilePath = $dir . '/' . basename($file->getFilename(), '.mysql.schema.xml');
+                $metaFilePath = $dir . '/';
 
                 if (count($files) > 1) {
                     $metaFilePath .= '.' . preg_replace('/\.mysql\.schema\.xml$/', '', $file->getFilename()) . '.meta-storm.xml';
@@ -71,7 +76,7 @@ class MetaGenerator
                 }
 
                 $schemaPath = $file->getRealPath();
-                $relativePath = str_replace('\\', '/', str_replace($projectRoot . '/', '', $schemaPath));
+                $relativePath = str_replace('\\', '/', str_replace($projectRoot, '', $schemaPath));
                 $schemaName = preg_replace('/\.mysql\.schema\.xml$/', '', $file->getFilename());
 
                 if ($verbose) {

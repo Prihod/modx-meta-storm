@@ -8,8 +8,9 @@ class Installer
     {
         echo "Running MetaStorm post-install script...\n";
         $projectRoot = dirname(__DIR__, 4);
+        $modxSchemaPath = $projectRoot . '/core/model/schema';
 
-        if (!file_exists($projectRoot . '/core/components')) {
+        if (!file_exists($modxSchemaPath)) {
             echo "MODX structure not detected, skipping initial generation.\n";
             return;
         }
@@ -18,7 +19,7 @@ class Installer
 
         $templatePath = dirname(__DIR__) . '/templates/meta-storm.xml.tpl';
 
-        MetaGenerator::generate($projectRoot, $templatePath, true, true);
+        MetaGenerator::generate($modxSchemaPath, $templatePath, true, true);
 
         echo "MetaStorm post-install process completed.\n";
     }

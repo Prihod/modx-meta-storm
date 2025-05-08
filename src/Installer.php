@@ -11,12 +11,12 @@ use Composer\Script\Event;
 
 class Installer implements PluginInterface, EventSubscriberInterface
 {
-    public function activate(Composer $composer, IOInterface $io)
+    public function activate(Composer $composer, IOInterface $io): void
     {
-        $io->write("MetaStorm plugin activated!");
+
     }
 
-    public static function getSubscribedEvents()
+    public static function getSubscribedEvents(): array
     {
         return [
             'post-install-cmd' => 'onPostInstall',
@@ -24,37 +24,47 @@ class Installer implements PluginInterface, EventSubscriberInterface
         ];
     }
 
-    public function onPostInstall(Event $event)
+    public function onPostInstall(Event $event): void
     {
-        Installer::postInstall();
+        $io = $event->getIO();
+        Installer::install($io->isVerbose());
     }
 
-    public function deactivate(Composer $composer, IOInterface $io)
+    public function deactivate(Composer $composer, IOInterface $io): void
     {
     }
 
-    public function uninstall(Composer $composer, IOInterface $io)
+    public function uninstall(Composer $composer, IOInterface $io): void
     {
 
     }
 
-    public static function postInstall()
+    public static function install(bool $verbose = false): void
     {
-        echo "Running MetaStorm post-install script...\n";
+        if ($verbose) {
+            echo "Running MetaStorm post-install script...\n";
+        }
+
         $projectRoot = dirname(__DIR__, 4);
         $modxSchemaPath = $projectRoot . '/core/model/schema';
 
         if (!file_exists($modxSchemaPath)) {
-            echo "MODX structure not detected, skipping initial generation.\n";
+            if ($verbose) {
+                echo "MODX structure not detected, skipping initial generation.\n";
+            }
             return;
         }
 
-        echo "MODX structure detected, generating .meta-storm.xml files...\n";
+        if ($verbose) {
+            echo "MODX structure detected, generating .meta-storm.xml files...\n";
+        }
 
         $templatePath = dirname(__DIR__) . '/templates/meta-storm.xml.tpl';
 
-        MetaGenerator::generate($modxSchemaPath, $templatePath, true, true);
+        MetaGenerator::generate($modxSchemaPath, $templatePath, true, $verbose);
 
-        echo "MetaStorm post-install process completed.\n";
+        if ($verbose) {
+            echo "MetaStorm post-install process completed.\n";
+        }
     }
 }

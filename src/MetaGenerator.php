@@ -92,7 +92,9 @@ class MetaGenerator
                 file_put_contents($metaFilePath, $xml);
                 $generatedCount++;
 
-                echo "Generated: $metaFilePath" . ($force ? " (overwritten)" : "") . "\n";
+                if ($verbose) {
+                    echo "Generated: $metaFilePath" . ($force ? " (overwritten)" : "") . "\n";
+                }
             }
         }
 

@@ -18,12 +18,10 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "MetaStorm\\Installer::postInstall",
-      "@php -r \"chmod('bin/generate-meta-storm.php', 0755);\""
+      "MetaStorm\\Installer::postInstall"
     ],
     "post-update-cmd": [
-      "MetaStorm\\Installer::postInstall",
-      "@php -r \"chmod('bin/generate-meta-storm.php', 0755);\""
+      "MetaStorm\\Installer::postInstall"
     ]
   },
   "bin": [
